@@ -1,6 +1,6 @@
 package sokoban
 
-class Box(initialPosition: Position)
-  extends Piece(initialPosition, true) {
+class Box(label: String, initialPosition: Position)
+  extends LabeledPiece(label, initialPosition, true) {
 
 }

@@ -8,7 +8,7 @@ abstract class Piece(initialPosition: Position, val movable: Boolean) {
 
   // STUB TO FAIL THE FIRST TEST
   def move(direction: Position): Unit = {
-    this.currentPosition = this.currentPosition.adjustTo(direction)
+    this.currentPosition = this.currentPosition.adjustBy(direction)
   }
 
 }
