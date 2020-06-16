@@ -10,4 +10,7 @@ A level can start out with almost every box already on a goal and yet still be q
 move every one of those boxes to a different goal before being able to move the last box into a goal.
 
 Contrast that to a level in which no box starts out on a goal, but the level can be quite easy if it's obvious to the 
-player which box goes on which goal.   
+player which box goes on which goal.
+
+I haven't yet decided which file format to support. Maybe both the XML-based SLC format and the "freer" SOK format. At 
+least initially, I'm leaning to supporting only SLC. 
