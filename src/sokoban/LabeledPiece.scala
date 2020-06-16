@@ -1,0 +1,5 @@
+package sokoban
+
+class LabeledPiece {
+
+}

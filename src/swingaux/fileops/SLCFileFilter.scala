@@ -5,10 +5,10 @@ import javax.swing.filechooser.FileFilter
 
 class SLCFileFilter extends FileFilter {
 
-  // STUB TO FAIL THE FIRST TEST
-  override def accept(file: File): Boolean = false
+  override def accept(file: File): Boolean = {
+    file.isDirectory || file.getName.toLowerCase.endsWith(".slc")
+  }
 
-  // STUB TO FAIL THE FIRST TEST
-  override def getDescription: String = "Sorry, not implemented yet"
+  override def getDescription: String = "Sokoban Level Collection (*.slc)"
 
 }
