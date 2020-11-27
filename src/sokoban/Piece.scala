@@ -7,7 +7,10 @@ abstract class Piece(initialPosition: Position, val movable: Boolean) {
   def getCurrentPosition: Position = Position.STAY_PUT
 
   // STUB TO FAIL THE FIRST TEST
-  def move(direction: Position): Unit = {
+  def canMoveTo(direction: Position): Boolean = false
+
+  // STUB TO FAIL THE FIRST TEST
+  def moveTo(direction: Position): Unit = {
     this.currentPosition = this.currentPosition.adjustBy(direction)
   }
 
