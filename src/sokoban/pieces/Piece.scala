@@ -1,4 +1,6 @@
-package sokoban
+package sokoban.pieces
+
+import sokoban.Position
 
 abstract class Piece(initialPosition: Position, val movable: Boolean) {
   private var currentPosition: Position = initialPosition

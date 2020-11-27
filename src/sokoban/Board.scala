@@ -1,5 +1,7 @@
 package sokoban
 
+import sokoban.pieces.Piece
+
 class Board {
   private var hasBeenSetup: Boolean = false
 
