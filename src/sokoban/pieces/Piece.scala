@@ -1,8 +1,15 @@
 package sokoban.pieces
 
-import sokoban.Position
+import sokoban.{Board, Position}
 
-abstract class Piece(initialPosition: Position, val movable: Boolean) {
+/**
+ * Represents a piece in a Sokoban board.
+ * @param initialPosition The piece's initial position.
+ * @param movable Whether the piece is movable or not in general (a movable
+ *                piece may become immovable if pushed into a position from
+ *                where it can't be moved back).
+ */
+abstract class Piece(val initialPosition: Position, val movable: Boolean) {
   private var currentPosition: Position = initialPosition
 
   // STUB TO FAIL THE FIRST TEST
