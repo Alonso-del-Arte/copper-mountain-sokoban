@@ -1,16 +1,19 @@
 # Copper Mountain Sokoban
 
-WORK IN PROGRESS: This will be a very basic implementation of Sokoban. The one important difference is that the boxes 
-and goals will be numbered.
+WORK IN PROGRESS: This will be a very basic implementation of Sokoban. The one 
+important difference is that the boxes and goals will be numbered.
 
-The purpose of numbering the boxes and goals is to give Sokoban level designers another metric of how easy or difficult 
-their levels are.
+The purpose of numbering the boxes and goals is to give Sokoban level designers 
+another metric of how easy or difficult their levels are.
 
-A level can start out with almost every box already on a goal and yet still be quite difficult because the player must 
-move every one of those boxes to a different goal before being able to move the last box into a goal.
+A level can start out with almost every box already on a goal and yet still be 
+quite difficult because the player must move every one of those boxes to a 
+different goal before being able to move the last box into a goal.
 
-Contrast that to a level in which no box starts out on a goal, but the level can be quite easy if it's obvious to the 
-player which box goes on which goal.
+Contrast that to a level in which no box starts out on a goal, but the level can 
+be quite easy if it's obvious to the player which box goes on which goal.
 
-I haven't yet decided which file format to support. Maybe both the XML-based SLC format and the "freer" SOK format. At 
-least initially, I'm leaning to supporting only SLC. 
+I haven't yet decided which file format to support. Maybe both the XML-based SLC 
+format and the "freer" SOK format. At least initially, I'm leaning to supporting 
+only SLC. See [the document about file formats](FileFormats.md) for more 
+details.
