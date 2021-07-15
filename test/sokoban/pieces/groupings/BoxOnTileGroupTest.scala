@@ -27,7 +27,10 @@ class BoxOnTileGroupTest {
     val tile = new Tile(position)
     val box = new Box("Test Box", position)
     val tileAndBoxGroup = new BoxOnTileGroup(tile, box)
-    fail("Finish writing test")
+    val tileGroup = new TileGroup(tile)
+    val expected = (tileGroup, box)
+    val actual = tileAndBoxGroup.moveBoxOut
+    assertEquals(expected, actual)
   }
 
   @Test def testPlayerTokenIn(): Unit = {
