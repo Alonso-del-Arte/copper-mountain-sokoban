@@ -5,6 +5,7 @@ import sokoban.pieces.{Box, Piece, PlayerToken}
 abstract class PieceGroup(val pieceA: Piece,
                           val pieceB: Piece,
                           val pieceC: Piece = null) {
+
   val size: Int = (this.pieceA, this.pieceB, this.pieceC) match {
     case (null, null, null) => 0
     case (null, _, null) =>
@@ -28,5 +29,11 @@ abstract class PieceGroup(val pieceA: Piece,
   def movePlayerTokenIn(pusher: PlayerToken): PieceGroup
 
   def movePlayerTokenOut: (PieceGroup, PlayerToken)
+
+  // TODO: Write tests for this
+  override def equals(obj: Any): Boolean = false
+
+  // TODO: Write tests for this
+  override def hashCode(): Int = 0
 
 }

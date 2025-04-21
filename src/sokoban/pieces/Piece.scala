@@ -1,6 +1,6 @@
 package sokoban.pieces
 
-import sokoban.{Board, Position}
+import sokoban.Position
 
 /**
  * Represents a piece in a Sokoban board.
@@ -11,6 +11,12 @@ import sokoban.{Board, Position}
  */
 abstract class Piece(val initialPosition: Position, val movable: Boolean) {
   private var currentPosition: Position = initialPosition
+
+  override def equals(obj: Any): Boolean = obj match {
+    case other: Piece => this.initialPosition == other.initialPosition &&
+      this.movable == other.movable && this.getClass == other.getClass
+    case _ => false
+  }
 
   // STUB TO FAIL THE FIRST TEST
   def getCurrentPosition: Position = Position.STAY_PUT
