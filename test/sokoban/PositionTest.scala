@@ -40,7 +40,8 @@ class PositionTest {
     val actual = start.interveningPositions(end)
     for (pos <- expected) {
       val msg =
-        s"List of intervening positions from ${start.toString} to ${end.toString} should contain ${pos.toString}"
+        s"List of intervening positions from ${start.toString} to " +
+          s"${end.toString} should contain ${pos.toString}"
       assert(actual.contains(pos), msg)
     }
     val msg = "Extraneous intervening positions should not be listed"
@@ -50,7 +51,8 @@ class PositionTest {
   @Test def testInterveningPositionsHorizontal(): Unit = {
     val start = Position(25, 28)
     val end = Position(30, 28)
-    val expected = List(Position(26, 28), Position(27, 28), Position(28, 28), Position(29, 28))
+    val expected = List(Position(26, 28), Position(27, 28), Position(28, 28),
+      Position(29, 28))
     val actual = start.interveningPositions(end)
     assertEquals(expected, actual)
   }
@@ -58,7 +60,8 @@ class PositionTest {
   @Test def testInterveningPositionsVertical(): Unit = {
     val start = Position(-3, -3)
     val end = Position(-3, 2)
-    val expected = List(Position(-3, -2), Position(-3, -1), Position(-3, 0), Position(-3, 1))
+    val expected = List(Position(-3, -2), Position(-3, -1), Position(-3, 0),
+      Position(-3, 1))
     val actual = start.interveningPositions(end)
     assertEquals(expected, actual)
   }

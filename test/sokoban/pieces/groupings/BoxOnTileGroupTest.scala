@@ -4,7 +4,6 @@ import sokoban.Position
 import sokoban.pieces.{Box, PlayerToken, Tile}
 
 import scala.util.Random
-
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions._
 
@@ -16,9 +15,15 @@ class BoxOnTileGroupTest {
     val tile = new Tile(position)
     val box = new Box("Test Box", position)
     val tileAndBoxGroup = new BoxOnTileGroup(tile, box)
-    val incomingBox = new Box("Incoming Box",
+    val incomingBox = new Box("Unacceptable Incoming Box",
       position.adjustBy(Position.MOVE_ONE_LEFT))
-    fail("Finish writing test")
+    val exception = assertThrows(classOf[IllegalStateException], () => {
+      val badGroup = tileAndBoxGroup.moveBoxIn(incomingBox)
+      println("Should not have been able to create " + badGroup.toString)
+    })
+    val excMsg = exception.getMessage
+    assert(excMsg != null, "Message should not be null")
+    println("\"" + excMsg + "\"")
   }
 
   @Test def testMoveBoxOut(): Unit = {
@@ -33,14 +38,22 @@ class BoxOnTileGroupTest {
     assertEquals(expected, actual)
   }
 
-  @Test def testPlayerTokenIn(): Unit = {
+  @Test def testMovePlayerTokenIn(): Unit = {
     println("movePlayerTokenIn")
     val position = Position(Random.nextInt, Random.nextInt)
     val tile = new Tile(position)
     val box = new Box("Test Box", position)
     val tileAndBoxGroup = new BoxOnTileGroup(tile, box)
-    val incomingPusher = new PlayerToken(position.adjustBy(Position.MOVE_ONE_LEFT))
-    fail("Finish writing test")
+    val badPusher = new PlayerToken(position.adjustBy(Position.MOVE_ONE_LEFT))
+    val throwable = assertThrows(classOf[IllegalStateException], () => {
+      val badGroup = tileAndBoxGroup.movePlayerTokenIn(badPusher)
+      println("Should not have been able to move " + badPusher.toString
+        + " into " + tileAndBoxGroup.toString + " to create "
+        + badGroup.toString)
+    })
+    val excMsg = throwable.getMessage
+    assert(excMsg != null, "Message should not be null")
+    println("\"" + excMsg + "\"")
   }
 
   @Test def testMovePlayerTokenOut(): Unit = {
