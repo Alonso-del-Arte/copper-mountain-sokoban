@@ -21,3 +21,6 @@ I haven't yet decided which file format to support. Maybe both the XML-based SLC
 format and the "freer" SOK format. At least initially, I'm leaning to supporting 
 only SLC. See [the document about file formats](FileFormats.md) for more 
 details.
+
+See my ASCII Sokoban project (GitHub repository is called sokoban-ascii) for a 
+quick and dirty HTML, CSS and JavaScript implementation.
