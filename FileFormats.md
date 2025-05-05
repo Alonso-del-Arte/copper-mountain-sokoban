@@ -1,4 +1,4 @@
-# File Formats
+# File formats
 
 The two main file formats for representing Sokoban levels are both 
 human-readable. Both formats use the symbols described in [the notation 
