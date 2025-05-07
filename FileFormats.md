@@ -31,6 +31,13 @@ split over multiple lines.
 > Rows may be combined on a single line by using "|" as a row separator, e.g., 
 "--3#|3#-#|#pb.#|5#". A "|" at the end of a line is optional and may be omitted.
 
+After that preamble, there should follow these fields:
+
+* Date created
+* Date of last change
+* Author name
+* Collection  name
+
 [FINISH WRITING]
 
 ## The SLC (*.slc) format
