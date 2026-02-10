@@ -29,3 +29,12 @@ out/
 
 # Vim
 *.swp
+
+# Miscellaneous
+localdevicenotes.txt
+scratchpad.txt
+tempnotes.md
+src/draft/
+src/secrets/
+test/draft/
+test/secrets/
