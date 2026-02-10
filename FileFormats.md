@@ -36,7 +36,7 @@ After that preamble, there should follow these fields:
 * Date created
 * Date of last change
 * Author name
-* Collection  name
+* Collection name
 
 [FINISH WRITING]
 
