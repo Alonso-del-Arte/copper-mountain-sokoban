@@ -8,8 +8,7 @@ object Position {
   val MOVE_ONE_RIGHT = new Position(1, 0)
   val MOVE_ONE_DOWN = new Position(0, 1)
 
-  // TODO: Rewrite test for this
-  def apply(x: Int, y: Int): Position = new Position(y, x)
+  def apply(x: Int, y: Int): Position = new Position(x, y)
 
 }
 
