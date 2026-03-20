@@ -35,7 +35,7 @@ class Position(val x: Int, val y: Int) {
 //    obj match {
 //    case obj: Position => (this.x == obj.x) && (this.y == obj.y)
 //    case _ => false
-  }
+//  }
 
   // STUB TO FAIL THE FIRST TEST
   override def hashCode(): Int = 0 // super.hashCode()
