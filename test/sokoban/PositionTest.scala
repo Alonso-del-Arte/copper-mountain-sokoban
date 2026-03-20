@@ -18,6 +18,49 @@ class PositionTest {
     assertEquals(y, position.y, message)
   }
 
+  @Test def testToString(): Unit = {
+    println("toString")
+    val position = Position(4, 7)
+    val expected = "(4,7)"
+    val actual = position.toString.replace(" ", "")
+    assertEquals(expected, actual)
+  }
+
+  @Test def testReferentialEquality(): Unit = {
+    val position = Position(4, 7)
+    assertEquals(position, position)
+  }
+
+  @Test def testNotEqualsNull(): Unit = {
+    val position = Position(3, 8)
+    assertNotEquals(position, null)
+  }
+
+  @Test def testEquals(): Unit = {
+    println("equals")
+    val somePosition = Position(-3, 10)
+    val samePosition = Position(-3, 10)
+    assertEquals(somePosition, samePosition)
+  }
+
+  @Test def testNotEqualsObjectOtherClass(): Unit = {
+    val position = Position(5, 3)
+    val rdn = new Rdn("OU=Sales+CN=J.Smith")
+    assertNotEquals(position, rdn)
+  }
+
+  @Test def testNotEqualsDiffXSameY(): Unit = {
+    val positionA = Position(82, 73)
+    val positionB = Position(55, 73)
+    assertNotEquals(positionA, positionB)
+  }
+
+  @Test def testNotEqualsSameXDiffY(): Unit = {
+    val positionA = Position(-2, 64)
+    val positionB = Position(-2, -83)
+    assertNotEquals(positionA, positionB)
+  }
+
   @Test def testAdjustBy(): Unit = {
     println("adjustBy")
     val startingPosition = Position(5, 3)
@@ -67,49 +110,6 @@ class PositionTest {
       Position(-3, 1))
     val actual = start.interveningPositions(end)
     assertEquals(expected, actual)
-  }
-
-  @Test def testToString(): Unit = {
-    println("toString")
-    val position = Position(4, 7)
-    val expected = "(4,7)"
-    val actual = position.toString.replace(" ", "")
-    assertEquals(expected, actual)
-  }
-
-  @Test def testReferentialEquality(): Unit = {
-    val position = Position(4, 7)
-    assertEquals(position, position)
-  }
-
-  @Test def testNotEqualsNull(): Unit = {
-    val position = Position(3, 8)
-    assertNotEquals(position, null)
-  }
-
-  @Test def testEquals(): Unit = {
-    println("equals")
-    val somePosition = Position(-3, 10)
-    val samePosition = Position(-3, 10)
-    assertEquals(somePosition, samePosition)
-  }
-
-  @Test def testNotEqualsObjectOtherClass(): Unit = {
-    val position = Position(5, 3)
-    val rdn = new Rdn("OU=Sales+CN=J.Smith")
-    assertNotEquals(position, rdn)
-  }
-
-  @Test def testNotEqualsDiffXSameY(): Unit = {
-    val positionA = Position(82, 73)
-    val positionB = Position(55, 73)
-    assertNotEquals(positionA, positionB)
-  }
-
-  @Test def testNotEqualsSameXDiffY(): Unit = {
-    val positionA = Position(-2, 64)
-    val positionB = Position(-2, -83)
-    assertNotEquals(positionA, positionB)
   }
 
 }
