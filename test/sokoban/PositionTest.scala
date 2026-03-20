@@ -41,7 +41,7 @@ class PositionTest {
     val y = Random.nextInt(20) + 1
     val position = Position(x, y)
     val message = s"$position should not equal null"
-    assertNotEquals(position, null)
+    assertNotEquals(position, null, message)
   }
 
   @Test def testEquals(): Unit = {
