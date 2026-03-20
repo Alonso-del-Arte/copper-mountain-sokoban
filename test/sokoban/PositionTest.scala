@@ -37,7 +37,10 @@ class PositionTest {
   }
 
   @Test def testNotEqualsNull(): Unit = {
-    val position = Position(3, 8)
+    val x = Random.nextInt(20) + 1
+    val y = Random.nextInt(20) + 1
+    val position = Position(x, y)
+    val message = s"$position should not equal null"
     assertNotEquals(position, null)
   }
 
