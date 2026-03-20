@@ -31,7 +31,7 @@ class Position(val x: Int, val y: Int) {
 
   override def toString: String = s"(${this.x}, ${this.y})"
 
-  override def equals(obj: Any): Boolean = false
+  override def equals(obj: Any): Boolean = true
 //    obj match {
 //    case obj: Position => (this.x == obj.x) && (this.y == obj.y)
 //    case _ => false
