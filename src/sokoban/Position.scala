@@ -29,7 +29,8 @@ class Position(val x: Int, val y: Int) {
       case _ => List()
   }
 
-  override def toString: String = s"(${this.x.toString}, ${this.y.toString})"
+  // TODO: Rewrite test for this
+  override def toString: String = s"((${this.x.toString}, ${this.y.toString}))"
 
   override def equals(obj: Any): Boolean = obj match {
     case obj: Position => (this.x == obj.x) && (this.y == obj.y)
