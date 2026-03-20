@@ -29,8 +29,11 @@ class PositionTest {
   }
 
   @Test def testReferentialEquality(): Unit = {
-    val position = Position(4, 7)
-    assertEquals(position, position)
+    val x = Random.nextInt(20) + 1
+    val y = Random.nextInt(20) + 1
+    val position = Position(x, y)
+    val message = s"$position should be equal to itself"
+    assertEquals(position, position, message)
   }
 
   @Test def testNotEqualsNull(): Unit = {
