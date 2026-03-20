@@ -5,14 +5,17 @@ import javax.naming.ldap.Rdn
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions._
 
+import scala.util.Random
+
 class PositionTest {
 
   @Test def testApply(): Unit = {
-    val x = 448
-    val y = 605
+    val x = Random.nextInt(100) + 1
+    val y = Random.nextInt(100) + 1
     val position = Position.apply(x, y)
-    assertEquals(x, position.x)
-    assertEquals(y, position.y)
+    val message = s"Applying ($x, $y)"
+    assertEquals(x, position.x, message)
+    assertEquals(y, position.y, message)
   }
 
   @Test def testAdjustBy(): Unit = {
