@@ -20,8 +20,10 @@ class PositionTest {
 
   @Test def testToString(): Unit = {
     println("toString")
-    val position = Position(4, 7)
-    val expected = "(4,7)"
+    val x = Random.nextInt(20) + 1
+    val y = Random.nextInt(20) + 1
+    val position = Position(x, y)
+    val expected = s"($x,$y)"
     val actual = position.toString.replace(" ", "")
     assertEquals(expected, actual)
   }
