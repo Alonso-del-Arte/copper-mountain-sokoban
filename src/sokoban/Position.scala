@@ -12,7 +12,7 @@ object Position {
 
 }
 
-class Position(val x: Int, val y: Int) {
+final class Position(val x: Int, val y: Int) {
 
   def adjustBy(adj: Position): Position =
     Position(this.x + adj.x, this.y + adj.y)
