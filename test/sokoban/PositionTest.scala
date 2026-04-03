@@ -1,6 +1,6 @@
 package sokoban
 
-import javax.naming.ldap.Rdn
+import java.awt.Point
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions._
@@ -42,6 +42,17 @@ class PositionTest {
     val position = Position(x, y)
     val message = s"$position should not equal null"
     assertNotEquals(position, null, message)
+  }
+
+  @Test def testNotEqualsDiffClass(): Unit = {
+    val x = Random.nextInt(20) + 1
+    val y = Random.nextInt(20) + 1
+    val position = Position(x, y)
+    val point = new Point(x, y)
+    val posStr = s"${position.getClass.getName} $position"
+    val ptStr = s"${point.getClass.getName} $point"
+    val message = s"$posStr should not equal $ptStr"
+    assertNotEquals(position, point, message)
   }
 
   @Test def testEquals(): Unit = {
