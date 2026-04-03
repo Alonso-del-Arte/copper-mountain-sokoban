@@ -44,17 +44,17 @@ class PositionTest {
     assertNotEquals(position, null, message)
   }
 
+  @Test def testNotEqualsObjectOtherClass(): Unit = {
+    val position = Position(5, 3)
+    val rdn = new Rdn("OU=Sales+CN=J.Smith")
+    assertNotEquals(position, rdn)
+  }
+
   @Test def testEquals(): Unit = {
     println("equals")
     val somePosition = Position(-3, 10)
     val samePosition = Position(-3, 10)
     assertEquals(somePosition, samePosition)
-  }
-
-  @Test def testNotEqualsObjectOtherClass(): Unit = {
-    val position = Position(5, 3)
-    val rdn = new Rdn("OU=Sales+CN=J.Smith")
-    assertNotEquals(position, rdn)
   }
 
   @Test def testNotEqualsDiffXSameY(): Unit = {
