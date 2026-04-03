@@ -74,8 +74,11 @@ class PositionTest {
   }
 
   @Test def testNotEqualsSameXDiffY(): Unit = {
-    val positionA = Position(-2, 64)
-    val positionB = Position(-2, -83)
+    val x = Random.nextInt(128)
+    val yA = Random.nextInt(128)
+    val yB = yA - Random.nextInt(32) - 1
+    val positionA = Position(x, yA)
+    val positionB = Position(x, yB)
     assertNotEquals(positionA, positionB)
   }
 
