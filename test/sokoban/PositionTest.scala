@@ -44,7 +44,7 @@ class PositionTest {
     assertNotEquals(position, null, message)
   }
 
-  @Test def testNotEqualsObjectOtherClass(): Unit = {
+  @Test def testNotEqualsDiffClass(): Unit = {
     val position = Position(5, 3)
     val rdn = new Rdn("OU=Sales+CN=J.Smith")
     assertNotEquals(position, rdn)
