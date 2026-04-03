@@ -46,8 +46,10 @@ class PositionTest {
 
   @Test def testEquals(): Unit = {
     println("equals")
-    val somePosition = Position(-3, 10)
-    val samePosition = Position(-3, 10)
+    val x = Random.nextInt(20) + 1
+    val y = Random.nextInt(20) + 1
+    val somePosition = Position(x, y)
+    val samePosition = Position(x, y)
     assertEquals(somePosition, samePosition)
   }
 
