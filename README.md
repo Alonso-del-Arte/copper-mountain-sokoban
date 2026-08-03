@@ -17,10 +17,10 @@ I'm thinking that boxes that start out on goals will be numbered with the prefix
 'G' (e.g., G1, G2, G3, etc.) and boxes that don't start out on goals will be 
 numbered with the prefix 'F'.
 
-I haven't yet decided which file format to support. Maybe both the XML-based SLC 
-format and the "freer" SOK format. At least initially, I'm leaning to supporting 
-only SLC. See [the document about file formats](FileFormats.md) for more 
-details.
+I have decided this program will support two different file formats for levels: 
+both the XML-based SLC format and the "freer" SOK format. But at least 
+initially, this program will only support one of those two formats, probably 
+SLC. See [the document about file formats](FileFormats.md) for more details.
 
 See my ASCII Sokoban project (GitHub repository is called sokoban-ascii) for a 
 quick and dirty HTML, CSS and JavaScript implementation.
