@@ -6,8 +6,8 @@ document](Notation.md).
 
 ## The plaintext (*.sok) format
 
-Files in this format begin with a very distinctive header. Here I quote only the 
-first five lines.
+Files in this format begin with a very distinctive header. These are the first 
+five lines.
 
 ```
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -38,11 +38,13 @@ After that preamble, there should follow these fields:
 * Author name
 * Collection name
 
-[FINISH WRITING]
+There should be two blank lines, then
+
+FINISH WRITING
 
 ## The SLC (*.slc) format
 
 The Sokoban Level Collection (SLC) format is an XML format. However, I haven't 
 been able to find the document type definition (DTD) anywhere.
 
-[FINISH WRITING]
+FINISH WRITING
